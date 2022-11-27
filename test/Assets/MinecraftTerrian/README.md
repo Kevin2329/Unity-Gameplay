@@ -1,1 +1,0 @@
-* this is the simple application of noise：creat the minecraft terrain.
