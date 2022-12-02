@@ -1,0 +1,4 @@
+repository "bagSystem@kevinchang77@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"

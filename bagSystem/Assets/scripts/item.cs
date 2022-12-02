@@ -2,13 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-[CreateAssetMenu(fileName = "New Item", menuName = "Inventory/New Item")]  //创建快捷创建方法
-public class item : ScriptableObject
+public class item : MonoBehaviour
 {
-    public Sprite itemImage;
-    public string itemName;
-    public int itemNub;
-    [TextArea]
-    public string itemInfo;
+    public Text CntText;
+    public string Name, Description;
+    public int Num;
+
+    private int cnt = 1;
+
+    private void Start()
+    {
+        cnt = 1;
+        Debug.Log(Name + ' ' + cnt.ToString());
+    }
+    public void AddCount()
+    {
+        cnt++;
+        CntText.text = cnt.ToString();
+        Debug.Log(Name + ' ' + cnt.ToString());
+    }
+    public void display()
+    {
+        BagManager.Instance.DisplayInfo(this);
+    }
+
+
+
+
 }
